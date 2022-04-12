@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation button</title>
+</head>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        background-color: #f78989;
+
+      
+    }
+
+    .container {
+
+        height: 86vh;
+        width: 98vw;
+        display: grid;
+        place-items: center;
+        align-items: center;
+        text-align: center;
+    
+    }
+    .backImg {
+        position: relative;
+        bottom: 7px;
+    }
+
+    .btn_div {
+        position: relative;
+        top: 50px;
+        left: 2px;
+    }
+
+    
+    /* //button animation css */
+
+    .btn_div a {
+        display: block;
+        background: #fbc414;
+        padding: 20px;
+        position: relative;
+        transform: perspective(700px) rotateX(45deg) skew(38deg) translate(0, 0);
+        box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+        transition: all 0.5s ease-in-out;
+        text-decoration: none;
+        color: white;
+        font-size: 5vh;
+        perspective: 700px;
+
+
+    }
+
+    .btn_div a::before {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 100%;
+        left: -20px;
+        top: 10px;
+        background: #fbc414;
+        transform: rotate(0deg) skewY(-45deg);
+    }
+
+    .btn_div a::after {
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: -10px;
+        height: 20px;
+        width: 100%;
+        transform: rotate(0deg) skewX(-45deg);
+        background:#faca2b;
+        transform: rotate(45deg) scewY(-45deg);
+    }
+
+    .btn_div a:hover {
+        transform: perspective(700px) rotateX(45deg) skew(38deg) translate(20px, -20px);
+        box-shadow: -50px 50px 10px rgba(0, 0, 0);
+        perspective: 700px;
+    }
+
+    .text {
+        color: rgb(248, 244, 244);
+        font-weight: 600;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="backImg">
+            <img src="https://t4.ftcdn.net/jpg/04/07/71/43/360_F_407714376_nEArPyetA165DlkseaJjSFZO5YBB7XAk.jpg">
+
+            <h2 class="text">Upto $ 1000 cashback<br> is waiting</h2>
+            <h5 class="text">refer a friend and win a cashback <br>of upto $ 1000 when they pay</h5>
+
+            <div class="btn_div">
+              
+                <a href="#"> <i class="fab fa-twitter"></i>win now</a>
+                <!-- <button class="btn">win now</button> -->
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
