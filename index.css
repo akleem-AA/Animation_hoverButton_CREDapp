@@ -6,7 +6,7 @@
   
  }
    /* main page css   */
- .container1 {
+ .main_div {
 	height: 100vh;
 	width: 100vw;
 	display: grid;
@@ -26,41 +26,79 @@
 #btnBox {
 	position: relative;
 	perspective: 100px;
+  transition: 2s;
 }
 .btnText{
 	color: black;
-    position: relative;
-    left: 28px;
+  position: relative;
+  left: 28px;
 	font-size: 16px;
+  z-index: 5470;
 }
 #btn_div {
+  position: relative;
 	padding: 20px;
 	transform-style: preserve-3d;
 	transform: rotateX(12deg) translate(0,0);
 	background-color: #ffff03c4;
-	transition: all 0.2s ease-in-out;
-    width: 30rem;
+	/* transition: all 0.2s ease-in-out; */
+  width: 30rem;
 	border: none;
+  transition:  2s;
+  z-index: -1;
 	
 }
 
+
+/* #btn_div:hover { */
+  .hover {
+    padding: 20px;
+    /* transform-style: preserve-3d; */
+    transform: rotateX(12deg) translate(-3px,-3px);
+    background: #ffff03c4;
+    box-shadow: 1px 56px 2px -23.5px rgb(6 0 19 / 79%);
+    /* transition: all 0.2s ease-in-out; */
+    transition: box-shadow 3s linear;
+
+    
+    
+  }
+  /* .hover{
+    box-shadow: 1px 56px 2px -23.5px rgb(6 0 19 / 79%);
+    
+  } */
+  
+   #btn_div:hover { 
+    padding: 20px;
+    transform-style: preserve-3d;
+    transform: rotateX(12deg) translate(-3px,-3px);
+    background: #ffff03c4;
+    box-shadow:  1px 52px 0px -23.5px rgb(6 0 19 / 79%);
+    /* transition: box-shadow 0.3s ease; */
+  
+    width: 30rem;	
+    
+  }
+
 #btn_div::after {
-	display: block;
+  	display: block;
     content: "";
     position: absolute;
-	bottom: -13px;
+  	bottom: -13px;
     left: 3px;
     height: 14px;
     width: 98%;
-	z-index: -200;
-	background: #fbc414;
+	  /* z-index: -2; */
+	  background: #fbc414;
     transform: rotateX(338deg);
-	border-top: 3px solid #e0b115;
+	  border-top: 3px solid #e0b115;
+    opacity: 1;
+    z-index: 1;
   
 }
 
 #animatinSpan{
-	padding: 23px 4px;
+	  padding: 23px 4px;
     transform-style: preserve-3d;
     transform: rotateX(11deg) translate(0,0);
     background: #ebeae7;
@@ -70,38 +108,37 @@
     position: relative;
     top: 1px;
     left: 0px;
-    z-index: -1;
-	position: relative;
-	animation: mymove 3s infinite;
-	animation-timing-function: linear;
+    z-index: 1000;
+   	position: relative;
+  	animation: mymove 2s infinite;
+  	animation-timing-function: linear;
 	
 	
 	
 }
 @keyframes mymove {
-	from {left: -150px;}
-	to {left: 80px;}
+	from {left: -140px; box-shadow: none;}
+	to {left: 80px; box-shadow: none;}
   }
 
 
 #animatinSpan::after{
-	display: block;
+  	display: block;
     content: "";
     position: absolute;
-	bottom: -14px;
+	  bottom: -13px;
     left: 1px;
-    height: 15px;
+    height: 14px;
     width: 100%;
+    z-index: 1;
     background-color: #ebeae7;;
-	transform: rotateX(338deg);
-	
+	  transform: rotateX(338deg);
 	
 
-	
 }
 #animatinSpan1{
-	padding: 23px ;
-	transform-style: preserve-3d;
+  	padding: 23px ;
+  	transform-style: preserve-3d;
     transform: rotateX(11deg) translate(0,0);
     background: #ebeae7;
     transition: all 0.2s ease-in-out;
@@ -110,40 +147,66 @@
     position: relative;
     top: 1px;
     left: 0px;
-    z-index: -1;
-	position: relative;
-	animation: mymove1 3s infinite;
-	animation-timing-function: linear; 
+    z-index: 100;
+  	position: relative;
+  	animation: mymove1 2s infinite;
+  	animation-timing-function: linear; 
 	
 }
 @keyframes mymove1 {
-	from {left: -138px;}
+	from {left: -128px;}
 	to {left: 90px;}
   }
 
 #animatinSpan1::after{
-	display: block;
+  	display: block;
     content: "";
     position: absolute;
-	bottom: -13px;
+  	bottom: -13px;
     left: 0px;
     height: 15px;
+    /* z-index: -5; */
     width: 99%;
     background-color: #ebeae7;;
-	transform: rotateX(338deg);
+	  transform: rotateX(338deg);
+    box-shadow: inset 0;
    
 }
 
+#animatinSpan2{
+  padding: 23px ;
+  transform-style: preserve-3d;
+  transform: rotateX(11deg) translate(0,0);
+  /* background: #ebeae7; */
+  transition: all 0.2s ease-in-out;
+  width: 24rem;
+  border: none;
+  position: relative;
+  top: 1px;
+  left: 0px;
+  z-index: 1;
+  position: relative;
+  
+  display: hidden;
 
-#btn_div:hover {
-	padding: 20px;
-	transform-style: preserve-3d;
-	transform: rotateX(12deg) translate(-3px,-3px);
-	background: #ffff03c4;
-	box-shadow:1px 52px 2px -23.5px rgb(6 0 19 / 79%);
-	width: 31rem;	
-	
 }
+
+#animatinSpan2::after{
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 0px;
+  height: 15px;
+  /* z-index: -5; */
+  width: 9%;
+  background-color: #fbc414;;
+  transform: rotateX(338deg);
+  box-shadow: inset 0;
+ 
+}
+
+
 
 .text {
 	color: rgb(248, 244, 244);
@@ -152,7 +215,7 @@
 }
 .text1{
 	color: rgb(233 225 225);
-    font-family: system-ui;
+  font-family: system-ui;
 	font-weight: 500;
 }
 
@@ -173,6 +236,11 @@
 .modal.fade.in .lab-modal-body {
 	bottom: 0;
 	opacity: 10;
+
+  }
+  .modal{
+    padding-left: 0px !important;
+
   }
   #lab-slide-bottom-popup{
 	  width: 100vw;
@@ -186,11 +254,11 @@
     padding: 37px;
     width: 100%;
     height: 100vh;
-	opacity: 0;
-	-webkit-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
-	-moz-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
-	-o-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
-	transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+	  opacity: 0;
+	 -webkit-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+	  -moz-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+	 -o-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+	 transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
   }
   
   .close {
@@ -210,11 +278,11 @@
   }
   
 .modal_btn{
-	display: flex;
+  	display: flex;
     align-items: center;
     flex-direction: column;
     align-content: space-around;
-	margin-top: 15px;
+	  margin-top: 15px;
 }
 
 .btn-primary1 {
@@ -225,16 +293,15 @@
     outline: none;
     line-height: 3rem;
     box-shadow: 4px 0px 1px #2c2c26;
-	display: flex;
+  	display: flex;
     justify-content: center;
-	gap: 15px;
-	margin: 10px;
+  	gap: 15px;
+	  margin: 10px;
 
 }
 .fa-whatsapp  {
 	color:#fff;
-	background:
-	 linear-gradient(#25d366,#25d366) 14% 84%/16% 16% no-repeat,
+	background: linear-gradient(#25d366,#25d366) 14% 84%/16% 16% no-repeat,
 	 radial-gradient(#25d366 60%,transparent 0);
   }
 
@@ -242,11 +309,11 @@
 	display: inline-table;
 }
 
-  .container2 {
-	width:100%;
+  .modal_content {
+  	width:100%;
     position: relative;
     right: 15px;
-	top: 30px;
+  	top: 30px;
   }
   
   .step {
@@ -293,29 +360,29 @@
   }
   
   .step.active .circle {
-	visibility: visible;
+  	visibility: visible;
     border-color: rgb(89 215 6 / 82%);
     background: rgb(89 215 6 / 82%);
 
   }
   
   .step.empty .circle {
-	visibility: hidden;
+  	visibility: hidden;
   }
   
   .step.empty .line {
-	top: 0;
-	height: 150%;
+    	top: 0;
+    	height: 150%;
   }
   
   .step:last-child .line {
-	border-left: 3px solid rgb(89 215 6 / 82%);
-	z-index: -1; /* behind the circle to completely hide */
+	    border-left: 3px solid rgb(89 215 6 / 82%);
+	    z-index: -1; /* behind the circle to completely hide */
   }
   
   .content {
-	margin-left: 20px;
-	display: inline-block;
+	  margin-left: 20px;
+	  display: inline-block;
   }
   .bottom_arrow{
 	 
@@ -327,3 +394,8 @@
   }
    
   /* end modal css */
+
+  /* .img{
+    isolation: isolate;
+    background-color: transparent;
+  } */

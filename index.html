@@ -19,20 +19,21 @@
 
 <body>
     <!-- animation home page with button -->
-    <div class="container1">
+    <div class="main_div">
         <div class="backImg">
-            <img src="https://t4.ftcdn.net/jpg/04/07/71/43/360_F_407714376_nEArPyetA165DlkseaJjSFZO5YBB7XAk.jpg"
+            <img class="img" src="https://t4.ftcdn.net/jpg/04/07/71/43/360_F_407714376_nEArPyetA165DlkseaJjSFZO5YBB7XAk.jpg"
                 width="280">
             <h2 class="text">Upto $ 1000 cashback<br> is waiting</h2>
             <p class="text1">refer a friend and win a cashback <br>of upto $ 1000 when they pay</p>
 
             <div id="btnBox">
-                <button id="btn_div" data-toggle="modal" data-target="#lab-slide-bottom-popup"><span class="btnText">Win
-                    now
-                </span>
-                
-                <span id="animatinSpan"></span>
-                <span id="animatinSpan1"></span>
+                <button id="btn_div"  data-toggle="modal"
+                    data-target="#lab-slide-bottom-popup">
+                    <span class="btnText">Win now</span>
+                    <span id="animatinSpan"></span>
+                    <span id="animatinSpan1"></span>
+                    <span id="animatinSpan2"></span>
+
                 </button>
             </div>
         </div>
@@ -44,7 +45,7 @@
             <div class="lab-modal-body">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
                         class="sr-only">Close</span></button>
-
+                    <span id="after"></span>
                 <div class="body_img">
                     <img src="https://cdn3.vectorstock.com/i/1000x1000/56/12/cash-back-icon-isolated-on-blue-background-vector-15225612.jpg"
                         width="170">
@@ -52,7 +53,7 @@
 
 
 
-                <div class="container2">
+                <div class="modal_content">
                     <!-- completed -->
                     <div class="step completed">
                         <div class="v-stepper">
@@ -113,5 +114,19 @@
 
 
 </body>
+<script>
+
+
+    setInterval(() => {
+
+        $('#btn_div').toggleClass('hover',{duration:1000});
+
+    }, 1000)
+    setTimeout(() => {
+        document.getElementById('btn_div').click()
+
+    }, 4000)
+
+</script>
 
 </html>
